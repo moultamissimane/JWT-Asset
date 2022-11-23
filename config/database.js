@@ -8,8 +8,9 @@ exports.connect = () => {
     .connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
+    //   are not supported by the MongoDB driver
+    //   useCreateIndex: true,
+    //   useFindAndModify: false,
     })
     .then(() => {
       console.log("Successfully connected to database");
